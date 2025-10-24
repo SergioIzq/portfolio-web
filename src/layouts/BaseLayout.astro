@@ -1,0 +1,30 @@
+---
+import '../styles/global.css';
+---
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Mi Portfolio</h1>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/about">Sobre mí</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot /> <!-- Aquí se renderiza la página -->
+    </main>
+
+    <footer>
+      <p>© 2025 Sergio</p>
+    </footer>
+  </body>
+</html>

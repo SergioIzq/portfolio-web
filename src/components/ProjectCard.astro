@@ -1,0 +1,9 @@
+---
+// Recibe props
+const { title, description, link } = Astro.props;
+---
+<div class="project-card">
+  <h3>{title}</h3>
+  <p>{description}</p>
+  <a href={link} target="_blank">Ver proyecto</a>
+</div>
