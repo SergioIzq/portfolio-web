@@ -1,16 +1,74 @@
 ---
+import Image from "astro/components/Image.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
+const projects: CollectionEntry<"projects">[] = await getCollection("projects");
+console.log(projects);
 ---
+
 <section id="projects" class="min-h-screen p-8 bg-gray-100 dark:bg-gray-800">
   <h2 class="text-3xl font-semibold text-center mb-8">Proyectos</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="p-6 rounded-xl bg-white dark:bg-gray-700 shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-bold mb-2">Proyecto 1</h3>
-      <p class="text-gray-600 dark:text-gray-300 mb-3">Descripción breve del proyecto.</p>
-      <div class="flex gap-4">
-        <a href="#" class="text-blue-500">Ver código</a>
-        <a href="#" class="text-blue-500">Demo</a>
-      </div>
-    </div>
+    {
+      projects.map((project) => (
+        <div class="p-6 rounded-xl bg-white dark:bg-gray-700 shadow hover:shadow-lg transition">
+          {/* Imagen de demo */}
+          {project.data.frontend?.screenshot && (
+            <a
+              href={project.data.frontend.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={project.data.frontend.screenshot}
+                alt={`Captura de ${project.data.title}`}
+                width={800}
+                height={450}
+                class="w-full h-48 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+            </a>
+          )}
+
+          <h3 class="text-xl font-bold mb-2">{project.data.title}</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-3">
+            {project.data.description}
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 mb-3">
+            Tecnologías usadas en el frontend:{" "}
+            {project.data.frontend.technologies}
+          </p>
+          {project.data.backend && (
+            <p class="text-gray-600 dark:text-gray-300 mb-3">
+              Tecnologías usadas en el backend:{" "}
+              {project.data.backend.technologies}
+            </p>
+          )}
+          <div class="flex gap-4">
+            <a
+              href={project.data.frontend.code}
+              class="text-blue-500 hover:underline"
+            >
+              Código Frontend
+            </a>
+            {project.data.backend && (
+              <a
+                href={project.data.backend.code}
+                class="text-blue-500 hover:underline"
+              >
+                Código Backend
+              </a>
+            )}
+            <a
+              href={project.data.frontend.demo}
+              class="text-blue-500 hover:underline"
+            >
+              Demo
+            </a>
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>
