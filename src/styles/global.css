@@ -1,1 +1,26 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased selection:bg-blue-500/30 selection:text-blue-800;
+}
+
+section {
+  @apply min-h-screen flex flex-col justify-center items-center px-6 md:px-12;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold mb-6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+

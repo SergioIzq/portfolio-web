@@ -1,0 +1,9 @@
+{
+  "name": "Mi Portafolio",
+  "short_name": "Portafolio",
+  "description": "Mi sitio web personal con mis proyectos",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#0ea5e9"
+}

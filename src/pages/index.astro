@@ -1,24 +1,96 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ProjectCard from '../components/ProjectCard.astro';
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import Contact from "../components/Contact.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ---
-<BaseLayout>
-  <section class="hero">
-    <h2>Hola, soy Sergio Izquierdo</h2>
-    <p>Desarrollador web frontend especializado en Angular y Astro.</p>
-  </section>
 
-  <section class="projects">
-    <h2>Mis proyectos</h2>
-    <ProjectCard 
-      title="Gestión económica (AhorroLand)" 
-      description="Página web para gestionar las finanzas de un usuario realizada con Angular y .NET Core" 
-      link="https://ahorroland.sergioizq.es" 
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ✅ SEO Básico -->
+    <title>Sergio Izquierdo | Desarrollador Web Full Stack</title>
+    <meta
+      name="description"
+      content="Portafolio de Sergio Izquierdo — desarrollador web especializado en crear aplicaciones modernas, rápidas y minimalistas con Astro, Angular, .NET Core."
     />
-    <ProjectCard
-      title="Más proyectos por realizar" 
-      description="" 
-      link="https://github.com/sergioizq" 
+    <meta name="author" content="Sergio Izquierdo" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- ✅ Palabras clave (ya no esenciales, pero pueden ayudar) -->
+    <meta
+      name="keywords"
+      content="desarrollador web, portfolio, frontend, fullstack, astro, react, node, tailwind, javascript"
     />
-  </section>
-</BaseLayout>
+
+    <!-- ✅ Open Graph (para compartir en redes) -->
+    <meta property="og:title" content="Sergio Izquierdo | Desarrollador Web" />
+    <meta
+      property="og:description"
+      content="Explora mis proyectos, habilidades y contacto. Desarrollo sitios y apps modernas con tecnologías como Astro, React y Node.js."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sergioizq.es" />
+    <meta property="og:image" content="https://sergioizq.es/og-image.jpg" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sergio Izquierdo | Desarrollador Web" />
+    <meta
+      name="twitter:description"
+      content="Desarrollador web especializado en sitios rápidos, minimalistas y modernos."
+    />
+
+    <!-- ✅ Favicon / íconos -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Tipografía moderna -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Datos estructurados (opcional, mejora el SEO en Google) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sergio Izquierdo",
+        "url": "https://tudominio.com",
+        "sameAs": [
+          "https://github.com/SergioIzq",
+          "https://www.linkedin.com/in/sergioizquierdomoreno"
+        ],
+        "jobTitle": "Desarrollador Web Full Stack",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        }
+      }
+    </script>
+  </head>
+
+  <body
+    class="scroll-smooth bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <Navbar />
+    <main>
+      <BaseLayout>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+      </BaseLayout>
+    </main>
+  </body>
+</html>
