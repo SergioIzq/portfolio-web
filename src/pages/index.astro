@@ -1,11 +1,12 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Skills from "../components/Skills.astro";
-import Contact from "../components/Contact.astro";
+import Navbar from "@components/sections/Navbar.astro";
+import Hero from "@components/sections/Hero.astro";
+import About from "@components/sections/About.astro";
+import Projects from "@components/sections/Projects.astro";
+import Skills from "@components/sections/Skills.astro";
+import Contact from "@components/sections/Contact.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Experience from "@components/sections/Experience.astro";
 ---
 
 <html lang="es">
@@ -82,10 +83,14 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   <body
     class="scroll-smooth bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100"
   >
-    <Navbar />
+    <header>
+      <Navbar />
+    </header>
+
     <main>
       <BaseLayout>
         <Hero />
+        <Experience />
         <About />
         <Projects />
         <Skills />

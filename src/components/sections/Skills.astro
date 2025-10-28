@@ -4,26 +4,29 @@
 
 <section
   id="skills"
-  class="min-h-screen px-8 py-16 flex flex-col justify-center items-center
-         bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-200 animate-fadeIn"
+  class="w-full px-8 py-20 flex flex-col justify-center items-cente text-gray-800 dark:text-gray-200"
 >
-  <h2
-    class="text-4xl font-semibold tracking-tight mb-12 text-center text-white"
-  >
-    Tecnologías
-  </h2>
+  <div class="text-center max-w-2xl mb-12">
+    <h2 class="text-4xl font-bold tracking-tight text-gray-800 dark:text-white">
+      Tecnologías
+    </h2>
+    <p class="text-lg text-gray-600 dark:text-gray-400 mt-4">
+      En mi viaje por el mundo del desarrollo web, he cultivado experiencia y
+      habilidades en una variedad de tecnologías.
+      <span class="text-blue-400">Mi stack tecnológico incluye:</span>
+    </p>
+  </div>
 
-  <div class="grid md:grid-cols-3 gap-12 w-full max-w-5xl">
-    <!-- FRONTEND -->
-    <div class="flex flex-col items-center">
-      <h3
-        class="text-xl font-medium mb-8 uppercase tracking-wider text-gray-400"
-      >
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+    <div
+      class="bg-gray-100 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-lg p-6"
+    >
+      <h3 class="text-2xl font-bold mb-6 text-center text-blue-400">
         Frontend
       </h3>
-      <div class="flex flex-wrap justify-center gap-6">
+      <div class="grid grid-cols-3 gap-6">
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <img
             src="https://cdn.simpleicons.org/angular/DD0031"
@@ -33,8 +36,9 @@
           />
           <span class="mt-2 text-sm">Angular</span>
         </div>
+
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <img
             src="https://cdn.simpleicons.org/astro/FF5D01"
@@ -44,8 +48,9 @@
           />
           <span class="mt-2 text-sm">Astro</span>
         </div>
+
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <img
             src="https://cdn.simpleicons.org/tailwindcss/06B6D4"
@@ -58,12 +63,13 @@
       </div>
     </div>
 
-    <!-- BACKEND -->
-    <div class="flex flex-col items-center">
-      <h3 class="text-2xl font-medium mb-6 text-green-400">Backend</h3>
-      <div class="flex flex-wrap justify-center gap-6">
+    <div
+      class="bg-gray-100 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-lg p-6"
+    >
+      <h3 class="text-2xl font-bold mb-6 text-center text-blue-400">Backend</h3>
+      <div class="grid grid-cols-3 gap-6">
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -107,12 +113,15 @@
       </div>
     </div>
 
-    <!-- BBDD / ORM -->
-    <div class="flex flex-col items-center">
-      <h3 class="text-2xl font-medium mb-6 text-yellow-400">BBDD / ORM</h3>
-      <div class="flex flex-wrap justify-center gap-6">
+    <div
+      class="bg-gray-100 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-lg p-6"
+    >
+      <h3 class="text-2xl font-bold mb-6 text-center text-blue-400">
+        BBDD / ORM
+      </h3>
+      <div class="grid grid-cols-3 gap-6">
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -123,17 +132,17 @@
               fill="#87802a"
               d="M65.2 3.71c-17.99 0-34.2 8.067-45.24 20.778 1.638.11 3.255.395 4.83.848.01 0 .034-.012.05 0C35.035 14.609 49.352 7.863 65.2 7.863h.175c30.71 0 55.852 25.153 55.852 56.024 0 30.875-25.141 56.015-55.852 56.015h-.176c-30.699 0-55.84-25.14-55.84-56.015 0-4.399.543-8.66 1.504-12.774-.55-3.703-1.238-6.437-2.039-7.761A59.96 59.96 0 0 0 5.2 63.887c0 33.136 27.04 60.05 60 60.05h.176c32.96 0 60.066-26.914 60.066-60.05 0-33.137-27.105-60.176-60.066-60.176Zm0 0"
             ></path>
+
             <path
               fill="#903a36"
               d="M112.05 44.813c-4.503-12.84-15.44-23.95-29.14-28.977-8.496-3.121-22.035-2.262-30.707.527-6.937 2.246-7.293 2.246-13.703 6.063-2.426 1.387-6.938.172-8.672 2.437-1.742 2.25 1.91 5.551 2.086 8.325 0 1.21 4.336-7.114 4.336-6.075 0 2.598-2.95 8.153-3.477 11.977-1.035 7.273 1.563 28.61 3.301 35.558.34 1.04 3.637-.175 4.512-.523 1.387-.176 2.602-4.688 4.68-6.074 9.023-6.414 13.87-14.739 21.332-16.13 6.777-1.222 14.93 2.778 17.875 8.329 1.566 2.95 2.777 6.238 2.777 8.324 0 1.563-.523 2.426-.875 1.563-2.074-5.899-4.16-10.41-6.063-11.973-4.511-3.64-6.601-4.687-13.187-3.3-6.762 1.562-19.422 13.89-23.422 19.437-2.43 3.3-3.289 9.023-1.566 11.625 5.39 7.8 9.726 9.886 19.265 10.574.348 0 3.121 1.914 1.91 1.914-12.152 0-18.222-3.3-26.374-16.14-.864-1.387-2.774-6.587-3.301-8.149-3.29-8.852-2.426-23.586-4.16-35.39-.512-3.47-1.215-7.462-2.954-9.887C23.75 24.688 6.926 25.55 4.5 29.887c-1.387 1.039-1.91 1.91-.875 2.601 9.2 6.938 9.2 14.575 9.55 22.035.352 9.715.352 16.829 3.813 25.852 6.938 18.898 22.547 31.402 40.075 33.824 21.335 3.125 36.773-5.375 48.398-20.125 10.414-13.183 12.14-33.648 6.59-49.261Zm0 0 M47.863 33.7c.176-1.388.524-4.673 1.563-5.727 1.91-1.723 4.511-2.774 6.773-1.383 3.29 1.91 4.852 4.16 4.676 7.808-.336 3.465-4.336 5.204-7.29 5.551 2.442-1.215 5.552-2.597 5.04-6.074-.352-1.21-2.777-.688-3.648-1.738-.688-.864.171-3.637-.688-3.809-.527 0-1.219 0-1.738.172-2.078.523-3.989 2.426-4.688 5.2Zm-3.988 21.34c.7-1.036 2.438-2.774 3.648-4.5 1.727-2.263 1.567-3.645 3.989-6.247-2.086 3.46-1.215 5.023-3.125 7.11-.864.863-1.739 2.253-4.512 3.636Zm0 0"
             ></path>
           </svg>
-
           <span class="mt-2 text-sm">NHibernate</span>
         </div>
 
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +153,11 @@
               d="M73.022 80.632h-5.415V47.368H86.4v4.596H73.022V62.34h12.514v4.574H73.022v13.72zm-12.582 0H41.601V47.368h18.84v4.596H47.06v9.033h12.537v4.573H47.062v10.443H60.44v4.62z"
             ></path></svg
           >
-
           <span class="mt-2 text-sm">Entity Framework</span>
         </div>
+
         <div
-          class="flex flex-col items-center hover:scale-110 transition-transform duration-200"
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
         >
           <img
             src="https://cdn.simpleicons.org/mysql/4479A1"
@@ -157,6 +166,51 @@
             loading="lazy"
           />
           <span class="mt-2 text-sm">MySQL</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-gray-100 dark:bg-slate-800/50 backdrop-blur-sm border border-gray-300 dark:border-gray-700 rounded-lg p-6"
+    >
+      <h3 class="text-2xl font-bold mb-6 text-center text-blue-400">
+        Herramientas
+      </h3>
+      <div class="grid grid-cols-3 gap-6">
+        <div
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
+        >
+          <img
+            src="https://cdn.simpleicons.org/git/F05032"
+            alt="Git"
+            class="w-12 h-12"
+            loading="lazy"
+          />
+          <span class="mt-2 text-sm">Git</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
+        >
+          <img
+            src="https://cdn.simpleicons.org/github/FFFFFF"
+            alt="GitHub"
+            class="w-12 h-12"
+            loading="lazy"
+          />
+          <span class="mt-2 text-sm">GitHub</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center transition-opacity duration-200 hover:opacity-70"
+        >
+          <img
+            src="https://cdn.simpleicons.org/docker/2496ED"
+            alt="Docker"
+            class="w-12 h-12"
+            loading="lazy"
+          />
+          <span class="mt-2 text-sm">Docker</span>
         </div>
       </div>
     </div>

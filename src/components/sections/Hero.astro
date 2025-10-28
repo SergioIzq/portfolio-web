@@ -1,0 +1,103 @@
+---
+// 1. Importar Image y los iconos
+import { Image } from "astro:assets";
+
+import profilePic from "@/assets/fotoPerfil.jpg";
+import LinkedinIcon from "@components/icons/LinkedinIcon.astro";
+import GithubIcon from "@components/icons/GithubIcon.astro";
+// CORREGIDO: Usar alias en lugar de ../
+import EmailIcon from "@components/icons/EmailIcon.astro"; 
+import ProjectsIcon from "@components/icons/ProjectsIcon.astro";
+
+// 2. Definir los enlaces de los botones
+const SOCIAL_LINKS = [
+  {
+    href: "https://www.linkedin.com/in/sergioizquierdomoreno",
+    text: "LinkedIn",
+    icon: LinkedinIcon,
+  },
+  {
+    href: "https://github.com/SergioIzq",
+    text: "GitHub",
+    icon: GithubIcon,
+  },
+  {
+    href: "mailto:seizquie@gmail.com",
+    text: "seizquie@gmail.com",
+    icon: EmailIcon,
+  },
+];
+
+const NAV_LINKS = [
+  {
+    href: "#projects",
+    text: "Proyectos",
+    icon: ProjectsIcon,
+  },
+];
+---
+
+<section id="hero" class="w-full py-20 md:py-40">
+  <div
+    class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+  >
+    <div class="flex flex-col items-start text-left order-last md:order-first">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">
+        Hola, soy
+        <span class="block text-cyan-500 dark:text-cyan-400"
+          >Sergio Izquierdo</span
+        >
+      </h1>
+      <span class="text-xl md:text-2xl text-gray-700 dark:text-gray-400 mt-2"
+        >Desarrollador Fullstack</span
+      >
+      <p class="text-lg text-gray-600 dark:text-gray-300 mt-6 max-w-xl">
+        <span class="text-orange-600 dark:text-orange-400 font-semibold"
+          >+2 años de experiencia</span
+        >. Desarrollador enfocado en crear
+        <span
+          class="bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 px-2 py-1 rounded"
+          >código limpio y soluciones escalables</span
+        >. Especializado en Angular, .NET y <span
+          class="text-orange-600 dark:text-orange-400 font-semibold"
+          >automatización CI/CD</span
+        >.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        {
+          SOCIAL_LINKS.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+            >
+              <link.icon class="w-4 h-4" />
+              {link.text}
+            </a>
+          ))
+        }
+        {
+          NAV_LINKS.map((link) => (
+            <a
+              href={link.href}
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+            >
+              <link.icon class="w-4 h-4" />
+              {link.text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="flex justify-center items-center order-first md:order-last">
+      <Image
+        src={profilePic}
+        alt="Foto de perfil de Sergio Izquierdo"
+        class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-xl border-4 border-gray-200 dark:border-gray-700"
+      />
+    </div>
+  </div>
+</section>

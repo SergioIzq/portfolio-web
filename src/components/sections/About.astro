@@ -1,0 +1,37 @@
+---
+import DownloadIcon from '../icons/DownloadIcon.astro';
+---
+
+<section
+  id="about"
+  class="w-full flex flex-col justify-center py-16 bg-white text-gray-700 dark:bg-slate-900 dark:text-gray-300"
+>
+  <div class="max-w-5xl w-full mx-auto px-8 flex flex-col items-center text-center">
+    
+    <h2 class="text-4xl font-bold text-white mb-10">Sobre mí</h2>
+
+    <p class="text-lg md:text-xl mb-6 leading-relaxed">
+      Hola 👋, soy Sergio Izquierdo, <strong class="text-blue-400 font-medium"
+        >Desarrollador Full Stack</strong
+      >. ...
+    </p>
+    <p class="text-lg md:text-xl mb-6 leading-relaxed">
+      Entre mis logros destaco la ...
+    </p>
+    <p class="text-lg md:text-xl mb-6 leading-relaxed">
+      Como proyecto personal, he desarrollado ...
+    </p>
+    <p class="text-lg md:text-xl mb-10 leading-relaxed">
+      Por último, comparto mi hoja de vida ...
+    </p>
+
+    <a
+      href="/Sergio_Izquierdo_FullStack_Developer.pdf"
+      download="Sergio_Izquierdo_FullStack_Developer.pdf"
+      class="inline-flex items-center gap-3 px-8 py-3 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg transform hover:scale-105"
+    >
+      <DownloadIcon />
+      <span>Curriculum</span>
+    </a>
+  </div>
+</section>
