@@ -1,83 +1,166 @@
 ---
-
+import SendIcon from "../icons/SendIcon.astro";
 ---
 
-<section id="contact" class="w-full flex justify-center py-20">
-  
-  <div class="max-w-xl w-full text-center">
-    
-    <h2 class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl mb-4">
-      Hablemos
+<section
+  id="contact"
+  class="w-full flex flex-col justify-center items-center py-20"
+>
+  <div class="max-w-6xl w-full text-start px-8">
+    <h2
+      class="text-4xl font-bold text-gray-900 dark:text-white sm:text-5xl mb-4"
+    >
+      Contacto
     </h2>
-    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400 mb-12">
+    <p class="mt-4 text-lg text-gray-900 dark:text-gray-400">
       ¿Tienes un proyecto en mente? Me encantaría saber de ti.
     </p>
-  
-    <form class="w-full space-y-6 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-xl text-left" id="contactForm">
-      
+    <p class="mt-2 text-lg text-gray-900 dark:text-gray-400 mb-12">
+      Si tienes alguna pregunta o simplemente quieres saludar, ¡no dudes en
+      escribirme!
+    </p>
+
+    <form
+      class="w-full space-y-6 bg-white dark:bg-gray-900 py-8 rounded-xl shadow-xl text-left p-6"
+      id="contactForm"
+    >
       <div>
-        <label for="nombre" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label
+          for="nombre"
+          class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
           Nombre
         </label>
-        <input 
-          type="text" 
-          id="nombre" 
+        <input
+          type="text"
+          id="nombre"
           name="nombre"
-          placeholder="Tu nombre" 
+          placeholder="Tu nombre"
           required
-          class="mt-1 w-full p-3 rounded-md 
-                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400 
-                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500 
-                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" 
+          class="mt-1 w-full p-3 rounded-md
+                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400
+                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         />
       </div>
-      
+
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label
+          for="email"
+          class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
           Email
         </label>
-        <input 
-          type="email" 
-          id="email" 
+        <input
+          type="email"
+          id="email"
           name="email"
-          placeholder="tu@email.com" 
+          placeholder="Tu email"
           required
-          class="mt-1 w-full p-3 rounded-md 
-                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400 
-                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500 
-                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" 
+          class="mt-1 w-full p-3 rounded-md
+                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400
+                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500
+                 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         />
       </div>
-      
+
       <div>
-        <label for="mensaje" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+        <label
+          for="mensaje"
+          class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
           Mensaje
         </label>
-        <textarea 
-          id="mensaje" 
+        <textarea
+          id="mensaje"
           name="mensaje"
-          placeholder="Tu mensaje..." 
-          rows="4" 
+          placeholder="Tu mensaje..."
+          rows="4"
           required
-          class="mt-1 w-full p-3 rounded-md 
-                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400 
-                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500 
+          class="mt-1 w-full p-3 rounded-md
+                 bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-400
+                 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:placeholder-gray-500
                  focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         ></textarea>
       </div>
-      
-      <button 
-        type="submit" 
-        class="w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md 
-               hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 
-               focus:ring-offset-2 dark:focus:ring-offset-gray-900 
-               transition-all duration-200 transform hover:-translate-y-0.5"
-      >
-        Enviar mensaje
-      </button>
 
-      <div id="statusMessage" class="text-center text-sm text-gray-600 dark:text-gray-400 h-4">
-        </div>
+      <div class="text-center">
+        <button
+          type="submit"
+          class="inline-flex justify-center items-center gap-2 px-4 py-2 bg-slate-700 text-white font-medium rounded-full hover:bg-slate-600 transition-colors duration-300"
+        >
+          <span>Enviar mensaje</span>
+          <SendIcon class="w-5 h-5" />
+        </button>
+      </div>
+
+      <div
+        id="statusMessage"
+        class="text-center text-sm text-gray-600 dark:text-gray-400 h-4"
+      >
+      </div>
     </form>
   </div>
+
+  <div
+    id="loadingOverlay"
+    class="fixed inset-0 bg-black/50 items-center justify-center z-50 hidden"
+  >
+    <div
+      class="loader border-4 border-blue-400 border-t-white rounded-full w-12 h-12 animate-spin"
+    >
+    </div>
+  </div>
 </section>
+
+<script>
+  const form = document.getElementById("contactForm") as HTMLFormElement | null;
+  const statusMessage = document.getElementById(
+    "statusMessage",
+  ) as HTMLElement | null;
+  const loadingOverlay = document.getElementById("loadingOverlay");
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        nombre: (form.querySelector("#nombre") as HTMLInputElement).value,
+        email: (form.querySelector("#email") as HTMLInputElement).value,
+        mensaje: (form.querySelector("#mensaje") as HTMLTextAreaElement).value,
+      };
+
+      if (statusMessage) statusMessage.textContent = "Enviando mensaje...";
+      if (loadingOverlay) {
+        loadingOverlay.classList.remove("hidden"); // mostrar overlay
+        loadingOverlay.classList.add("flex"); // activa flex
+      }
+
+      try {
+        const resp = await fetch(
+          "https://gbackend.sergioizq.es/api/auth/contactoForm",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          },
+        );
+
+        if (!resp.ok) throw new Error("Error al enviar");
+
+        const result = await resp.json();
+        if (statusMessage) statusMessage.textContent = "✅ " + result.mensaje;
+        form.reset();
+      } catch (error) {
+        if (statusMessage)
+          statusMessage.textContent = "❌ Hubo un error al enviar el mensaje.";
+        console.error(error);
+      } finally {
+        if (loadingOverlay) {
+          loadingOverlay.classList.add("hidden"); // oculta overlay
+          loadingOverlay.classList.remove("flex"); // desactiva flex
+        }
+      }
+    });
+  }
+</script>

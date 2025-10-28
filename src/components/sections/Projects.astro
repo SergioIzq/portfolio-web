@@ -15,7 +15,7 @@ const projects: CollectionEntry<"projects">[] = await getCollection("projects");
       <h2 class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4">
         Proyectos
       </h2>
-      <p class="text-lg text-gray-600 dark:text-slate-400">
+      <p class="text-lg text-gray-900 dark:text-gray-400">
         Mis proyectos más emocionantes y creativos. Cada proyecto es el
         resultado de mi dedicación y pasión por la programación...
       </p>
@@ -80,17 +80,18 @@ const projects: CollectionEntry<"projects">[] = await getCollection("projects");
                 href={project.data.frontend.demo}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 px-4 py-2 
+                class="inline-flex items-center gap-2 px-3 py-1.5 
          bg-gray-100 dark:bg-gray-800 
          border border-gray-300 dark:border-gray-700 
          rounded-full text-sm font-medium 
          text-gray-700 dark:text-gray-300 
          hover:bg-gray-200 dark:hover:bg-gray-700 
-         transition-all"
+         transition-all mb-3 w-fit"
               >
                 <ExternalLinkIcon class="w-4 h-4" />
                 <span>Ver código</span>
               </a>
+
               <footer class="flex flex-wrap gap-2">
                 {allTechs.map((tech) => (
                   <span class="text-xs bg-gray-200 text-gray-700 dark:bg-slate-700 dark:text-slate-300 px-3 py-1 rounded-md font-medium">

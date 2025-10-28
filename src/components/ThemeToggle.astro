@@ -1,23 +1,23 @@
----
-
----
-
 <button
   id="theme-toggle-btn"
-  class="bg-slate-800 p-2 rounded-full text-gray-400 hover:text-white transition-colors"
+  class="text-gray-400 hover:text-white transition-colors
+         w-6 h-6 flex items-center justify-center 
+         relative rounded-full bg-slate-800 overflow-hidden"
 >
   <svg
     id="theme-icon-sun"
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
+    width="16"
+    height="16"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="icon icon-tabler icon-tabler-sun"
+    class="icon icon-tabler icon-tabler-sun 
+           transition-all duration-300 transform 
+           dark:-rotate-90 dark:scale-0 dark:opacity-0"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
@@ -29,15 +29,18 @@
   <svg
     id="theme-icon-moon"
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
+    width="16"
+    height="16"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="icon icon-tabler icon-tabler-moon hidden"
+    class="icon icon-tabler icon-tabler-moon 
+           absolute transition-all duration-300 transform 
+           opacity-0 scale-0 rotate-90 
+           dark:opacity-100 dark:scale-100 dark:rotate-0"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
     <path
@@ -49,8 +52,7 @@
 <script>
   // Constantes
   const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  const sunIcon = document.getElementById("theme-icon-sun");
-  const moonIcon = document.getElementById("theme-icon-moon");
+  // Ya no necesitamos 'sunIcon' ni 'moonIcon'
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const htmlElement = document.documentElement;
@@ -58,8 +60,12 @@
   // Función para aplicar el tema y mostrar/ocultar iconos
   const applyTheme = (isDark: boolean) => {
     htmlElement.classList.toggle("dark", isDark);
-    sunIcon?.classList.toggle("hidden", isDark);
-    moonIcon?.classList.toggle("hidden", !isDark);
+    
+    // CAMBIO EN SCRIPT:
+    // Eliminamos estas líneas. El CSS (Tailwind)
+    // se encarga de la animación usando la clase 'dark' en <html>.
+    // sunIcon?.classList.toggle("hidden", isDark);
+    // moonIcon?.classList.toggle("hidden", !isDark);
   };
 
   // Función para manejar el clic en el botón

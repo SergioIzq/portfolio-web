@@ -5,5 +5,5 @@ frontend:
   code: "https://github.com/SergioIzq/Astro/tree/main/pokemon-static"
   demo: "https://pokedex.sergioizq.es"
   technologies: "Astro"
-  screenshot: "/src/assets/screenshots/pokedex.png"
+  screenshot: "/screenshots/pokedex.png"
 ---

@@ -1,46 +1,67 @@
-# Astro Starter Kit: Basics
+# 🚀 Portafolio Personal
 
-```sh
-npm create astro@latest -- --template basics
-```
+## 🌟 Descripción del Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+¡Bienvenido/a a mi portafolio personal!
 
-## 🚀 Project Structure
+Esta *landing page* es la carta de presentación de mi trabajo como **[Desarrollador FullStack Developer]**. En ella, podrás encontrar una visión general de mis **habilidades**, un resumen de mi **experiencia** y una galería de mis **proyectos** más relevantes.
 
-Inside of your Astro project, you'll see the following folders and files:
+El objetivo principal de esta página es mostrar mis capacidades técnicas y creativas, facilitando la navegación y el contacto profesional.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 💡 Características Principales
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+* **Diseño *Responsive***: Adaptable a cualquier dispositivo (móvil, tablet, escritorio).
+* **Sección *Acerca de Mí***: Resumen profesional y habilidades clave.
+* **Galería de Proyectos**: Muestra detallada de mis trabajos con enlaces a las demos o repositorios.
+* **Formulario de Contacto**: Facilita la comunicación con empleadores o colaboradores.
+* **Tecnologías Modernas**: Construido con [Menciona las tecnologías principales, ej: React, Tailwind CSS, etc.].
 
-## 🧞 Commands
+## 🛠️ Tecnologías Utilizadas
 
-All commands are run from the root of the project, from a terminal:
+Esta *landing page* fue construida utilizando las siguientes herramientas y tecnologías:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Categoría | Herramientas / Frameworks |
+| :--- | :--- |
+| **Frontend** | [HTML5, CSS3, JavaScript (ES6+), TypeScript] |
+| **Frameworks/Librerías** | [Angular, Astro, .NET Core, NHibernate, EntityFramework] |
+| **Estilización** | [Tailwind CSS, Styled Components] |
+| **Despliegue (Deployment)** | [Hostinger] |
 
-## 👀 Want to learn more?
+## 🔗 Enlaces Importantes
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+* **Sitio Web (Demo):** [SergioIzq] (https://sergioizq.com)
+* **Repositorio de Código:** [https://github.com/SergioIzq/landing-page]
+
+## 💻 Instalación Local
+
+Si deseas clonar y ejecutar este proyecto en tu entorno local para desarrollo o revisión:
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories](https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories)
+    ```
+2.  **Accede al directorio del proyecto:**
+    ```bash
+    cd [landing-page]
+    ```
+3.  **Instala las dependencias:**
+    ```bash
+    npm install  # o yarn install
+    ```
+4.  **Ejecuta el servidor de desarrollo:**
+    ```bash
+    npm run dev  # o el comando de inicio de tu framework (ej: npm start)
+    ```
+
+El proyecto debería abrirse en tu navegador en `http://localhost:4200` (o el puerto configurado).
+
+## 👥 Autor
+
+* **[Sergio Izquierdo Moreno]**
+* **GitHub:** [https://github.com/SergioIzq]
+* **LinkedIn:** [https://www.linkedin.com/in/sergioizquierdomoreno]
+* **Email:** [seizquie@gmail.com]
+
+## 📜 Licencia
+
+Este proyecto está bajo la Licencia **[Ej: MIT]**. Consulta el archivo `LICENSE.md` para más detalles.

@@ -1,34 +1,42 @@
 ---
-import DownloadIcon from '../icons/DownloadIcon.astro';
+import DownloadIcon from "../icons/DownloadIcon.astro";
 ---
 
-<section
-  id="about"
-  class="w-full flex flex-col justify-center py-16 bg-white text-gray-700 dark:bg-slate-900 dark:text-gray-300"
->
-  <div class="max-w-5xl w-full mx-auto px-8 flex flex-col items-center text-center">
-    
-    <h2 class="text-4xl font-bold text-white mb-10">Sobre mí</h2>
+<section id="about" class="w-full pb-20 text-gray-800 dark:text-slate-300">
+  <div class="max-w-6xl w-full mx-auto px-8 flex flex-col text-start">
+    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-10">
+      Sobre mí
+    </h2>
 
     <p class="text-lg md:text-xl mb-6 leading-relaxed">
       Hola 👋, soy Sergio Izquierdo, <strong class="text-blue-400 font-medium"
         >Desarrollador Full Stack</strong
-      >. ...
+      >. Cuento con más de 2 años de experiencia en Angular, .NET Core y SQL
+      Server, enfocado en crear soluciones web escalables, seguras y con código
+      limpio. Actualmente, estoy cursando Ingeniería Informática en la Universida Pablo de Olavide (UPO),
+      Sevilla, y continúo formándome en mi tiempo libre para mantenerme al día
+      con las últimas tecnologías.
     </p>
     <p class="text-lg md:text-xl mb-6 leading-relaxed">
-      Entre mis logros destaco la ...
+      Entre mis logros destaco la optimización de consultas críticas, reduciendo
+      tiempos de respuesta hasta un 35%, y la automatización de procesos de
+      despliegue (CI/CD) usando GitHub Actions y Docker.
     </p>
     <p class="text-lg md:text-xl mb-6 leading-relaxed">
-      Como proyecto personal, he desarrollado ...
+      Como proyecto personal, he desarrollado una aplicación web de gestión
+      económica con Angular y .NET Core. En ella, implementé una arquitectura
+      por capas y APIs REST con NHibernate para operaciones CRUD sobre SQL
+      Server.
     </p>
     <p class="text-lg md:text-xl mb-10 leading-relaxed">
-      Por último, comparto mi hoja de vida ...
+      Por último, comparto mi hoja de vida donde podrás encontrar más detalles
+      sobre mi experiencia y proyectos.
     </p>
 
     <a
       href="/Sergio_Izquierdo_FullStack_Developer.pdf"
       download="Sergio_Izquierdo_FullStack_Developer.pdf"
-      class="inline-flex items-center gap-3 px-8 py-3 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg transform hover:scale-105"
+      class="self-center inline-flex items-center gap-3 px-8 py-3 bg-gray-700 text-white font-semibold rounded-full hover:bg-gray-600 transition-all duration-300 shadow-lg transform hover:scale-105"
     >
       <DownloadIcon />
       <span>Curriculum</span>

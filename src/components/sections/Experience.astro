@@ -1,46 +1,46 @@
 ---
-// 1. Importa el icono
 import BriefcaseIcon from "../icons/BriefcaseIcon.astro";
 ---
 
 <section
   id="experience"
-  class="w-full py-20
-         text-gray-800 dark:text-slate-300"
+  class="w-full pb-20 text-gray-800 dark:text-slate-300"
 >
-  <div class="max-w-3xl mx-auto px-6">
+  <div class="max-w-6xl w-full mx-auto px-8">
     <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-12">
       Experiencia
     </h2>
 
-    <ol class="relative border-l border-gray-300 dark:border-gray-700">
-      <li class="mb-10 ml-10">
-        <span
-          class="absolute flex items-center justify-center w-8 h-8
-                 bg-gray-200 dark:bg-gray-700 rounded-full
-                 -left-4 ring-8 ring-gray-50 dark:ring-gray-900"
-        >
-          <BriefcaseIcon />
-        </span>
-
-        <h3 class="text-xl font-bold text-cyan-500 dark:text-cyan-400">
-          Programador FullStack
-          <span class="font-medium text-gray-600 dark:text-gray-400">
-            - Montrel S.A</span
+    <div class="max-w-3xl">
+      <ol class="relative border-l border-gray-300 dark:border-gray-700">
+        <li class="mb-10 ml-10">
+          <span
+            class="absolute flex items-center justify-center w-8 h-8
+                   bg-gray-200 dark:bg-gray-700 rounded-full
+                   -left-4 ring-8 ring-gray-50 dark:ring-gray-900"
           >
-        </h3>
-        <time
-          class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-500"
-        >
-          Marzo 2024 - Presente
-        </time>
-        <p class="text-base font-normal text-gray-600 dark:text-gray-400">
-          Encargado de desarrollar soluciones web en empresa del sector Oil &
-          Gas. Uso de arquitectura Domain Driven Design (DDD) con patrón Mediatr
-          y CQRS.
-        </p>
-      </li>
+            <BriefcaseIcon />
+          </span>
 
-      </ol>
+          <h3 class="text-xl font-bold text-cyan-500 dark:text-cyan-400">
+            Programador FullStack
+            <span class="font-medium text-gray-600 dark:text-gray-400">
+              - Montrel S.A</span
+            >
+          </h3>
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-500 dark:text-gray-500"
+          >
+            Marzo 2024 - Presente
+          </time>
+          <p class="text-base font-normal text-gray-900 dark:text-gray-400">
+            Encargado de desarrollar soluciones web en empresa del sector Oil &
+            Gas. Uso de arquitectura Domain Driven Design (DDD) con patrón Mediatr
+            y CQRS.
+          </p>
+        </li>
+
+        </ol>
+    </div>
   </div>
 </section>
