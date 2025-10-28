@@ -1,74 +1,113 @@
 ---
-import Image from "astro/components/Image.astro";
+// Importamos Image y los tipos de Astro
+import { Image } from "astro:assets"; // Asegúrate de usar astro:assets si es posible
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
+// Obtenemos los proyectos como ya lo hacías
 const projects: CollectionEntry<"projects">[] = await getCollection("projects");
-console.log(projects);
 ---
 
-<section id="projects" class="min-h-screen p-8 bg-gray-100 dark:bg-gray-800">
-  <h2 class="text-3xl font-semibold text-center mb-8">Proyectos</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {
-      projects.map((project) => (
-        <div class="p-6 rounded-xl bg-white dark:bg-gray-700 shadow hover:shadow-lg transition">
-          {/* Imagen de demo */}
-          {project.data.frontend?.screenshot && (
-            <a
-              href={project.data.frontend.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src={project.data.frontend.screenshot}
-                alt={`Captura de ${project.data.title}`}
-                width={800}
-                height={450}
-                class="w-full h-48 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
-            </a>
-          )}
+<section
+  id="projects"
+  class="min-h-screen py-16 px-8 bg-slate-900 text-slate-300"
+>
+  <div class="max-w-4xl mx-auto mb-12">
+    <h2 class="text-4xl font-bold text-slate-100 mb-4">Proyectos</h2>
+    <p class="text-lg text-slate-400">
+      Mis proyectos más emocionantes y creativos. Cada proyecto es el resultado
+      de mi dedicación y pasión por la programación, y estoy encantado de
+      compartirlos contigo. ¡Descubre cómo transformo ideas en realidades
+      digitales!
+    </p>
+  </div>
 
-          <h3 class="text-xl font-bold mb-2">{project.data.title}</h3>
-          <p class="text-gray-600 dark:text-gray-300 mb-3">
-            {project.data.description}
-          </p>
-          <p class="text-gray-600 dark:text-gray-300 mb-3">
-            Tecnologías usadas en el frontend:{" "}
-            {project.data.frontend.technologies}
-          </p>
-          {project.data.backend && (
-            <p class="text-gray-600 dark:text-gray-300 mb-3">
-              Tecnologías usadas en el backend:{" "}
-              {project.data.backend.technologies}
-            </p>
-          )}
-          <div class="flex gap-4">
-            <a
-              href={project.data.frontend.code}
-              class="text-blue-500 hover:underline"
+  <div
+    class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch"
+  >
+    {
+      /* --- TUS PROYECTOS DE ASTRO:CONTENT --- */
+      projects.map((project) => {
+        // ... (Toda tu lógica de map no cambia)
+        const isFullstack = !!project.data.backend;
+        const tag = isFullstack ? "Fullstack" : "Frontend";
+        const tagClass = isFullstack
+          ? "bg-indigo-500/20 text-indigo-300"
+          : "bg-emerald-500/20 text-emerald-300";
+        const feTechs =
+          project.data.frontend.technologies?.split(",").map((t) => t.trim()) ||
+          [];
+        const beTechs =
+          project.data.backend?.technologies?.split(",").map((t) => t.trim()) ||
+          [];
+        const allTechs = [...feTechs, ...beTechs];
+
+        return (
+          <article class="p-5 md:p-6 rounded-xl bg-slate-800 shadow-lg flex flex-col h-full border border-transparent hover:border-indigo-500/30 transition-all duration-300">
+            {/* ... (Todo el contenido de tu <article> no cambia) ... */}
+            <span
+              class={`text-xs font-semibold rounded-full px-3 py-1 self-start mb-4 ${tagClass}`}
             >
-              Código Frontend
-            </a>
-            {project.data.backend && (
+              {tag}
+            </span>
+            {project.data.frontend.screenshot && (
               <a
-                href={project.data.backend.code}
-                class="text-blue-500 hover:underline"
+                href={project.data.frontend.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block mb-5"
               >
-                Código Backend
+                <div class="rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src={project.data.frontend.screenshot}
+                    alt={`Captura de ${project.data.title}`}
+                    width={800}
+                    height={450}
+                    format="webp"
+                    class="w-full h-auto aspect-[16/10] object-cover object-top transition-transform duration-300 hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
               </a>
             )}
-            <a
-              href={project.data.frontend.demo}
-              class="text-blue-500 hover:underline"
-            >
-              Demo
-            </a>
-          </div>
-        </div>
-      ))
+            <header>
+              <h3 class="text-2xl font-bold text-slate-100 mb-3">
+                {project.data.title}
+              </h3>
+            </header>
+            <p class="text-slate-300 text-sm mb-6 flex-grow">
+              {project.data.description}
+            </p>
+            <footer class="flex flex-wrap gap-2">
+              {allTechs.map((tech) => (
+                <span class="text-xs bg-slate-700 text-slate-300 px-3 py-1 rounded-md font-medium">
+                  {tech}
+                </span>
+              ))}
+            </footer>
+          </article>
+        );
+      })
     }
-  </div>
-</section>
+
+    <a
+      href="https://github.com/SergioIzq"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="p-5 md:p-6 rounded-xl bg-slate-800 shadow-lg flex flex-col h-full 
+             border border-transparent hover:border-indigo-500/30 transition-all duration-300
+             justify-center items-center text-center group"
+    >
+      <h3
+        class="text-2xl font-bold text-slate-100 group-hover:text-indigo-300 transition-colors duration-300"
+      >
+        Ver más proyectos
+      </h3>
+      <span
+        class="text-slate-400 group-hover:text-indigo-300 transition-colors duration-300 mt-2 text-lg"
+      >
+        en GitHub &rarr;
+      </span>
+    </a>
+    
+  </div> </section>

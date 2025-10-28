@@ -8,7 +8,7 @@ const projectsCollection = defineCollection({
       technologies: z.string(),
       code: z.string().url(),
       demo: z.string().url(),
-      screenshot: z.string().url().optional()
+      screenshot: z.string().optional()
     }),
     backend: z
       .object({
