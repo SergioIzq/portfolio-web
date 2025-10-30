@@ -7,6 +7,6 @@ frontend:
   technologies: "Angular 16 con estados NGRX basados en el patrón Redux"
   screenshot: "/screenshots/ahorroland.png"
 backend:
-  code: "https://github.com/SergioIzq/GastosApp-Backend"
+  code: "https://github.com/SergioIzq/AhorroLand-Backend"
   technologies: ".NET Core, NHibernate, DDD (Domain Driven Design), CQRS (Command Query Responsibility Segregation)"
 ---
