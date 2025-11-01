@@ -60,7 +60,7 @@ El proyecto debería abrirse en tu navegador en `http://localhost:4200` (o el pu
 * **[Sergio Izquierdo Moreno]**
 * **GitHub:** [https://github.com/SergioIzq]
 * **LinkedIn:** [https://www.linkedin.com/in/sergioizquierdomoreno]
-* **Email:** [seizquie@gmail.com]
+* **Email:** [sergioizq.dev@gmail.com]
 
 ## 📜 Licencia
 
