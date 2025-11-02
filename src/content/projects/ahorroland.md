@@ -3,7 +3,7 @@ title: "AhorroLand"
 description: "Aplicación full stack para la gestión económica personal, con autenticación robusta. Backend con arquitectura en dos capas (Actualmente migrando a DDD (Domain Driven Design) junto con patrón CQRS usando MediatR)"
 frontend:
   code: "https://github.com/SergioIzq/GastosApp-Frontend"
-  demo: "https://ahorroland.sergioizq.es"
+  demo: "https://ahorroland.sergioizq.com"
   technologies: "Angular 16 con estados NGRX basados en el patrón Redux"
   screenshot: "/screenshots/ahorroland.png"
 backend:
