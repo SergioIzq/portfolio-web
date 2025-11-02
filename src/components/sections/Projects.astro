@@ -9,7 +9,10 @@ import ExternalLinkIcon from "@components/icons/ExternalLinkIcon.astro";
 const projects: CollectionEntry<"projects">[] = await getCollection("projects");
 ---
 
-<section id="projects" class="py-16 text-gray-800 dark:text-slate-300 scroll-mt-20">
+<section
+  id="projects"
+  class="py-16 text-gray-800 dark:text-slate-300 scroll-mt-20"
+>
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-12">
       <h2 class="text-4xl font-bold text-gray-900 dark:text-slate-100 mb-4">
@@ -77,7 +80,7 @@ const projects: CollectionEntry<"projects">[] = await getCollection("projects");
                 {project.data.description}
               </p>
               <a
-                href={project.data.frontend.demo}
+                href={project.data.frontend.code}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex items-center gap-2 px-3 py-1.5 
@@ -91,6 +94,24 @@ const projects: CollectionEntry<"projects">[] = await getCollection("projects");
                 <ExternalLinkIcon class="w-4 h-4" />
                 <span>Ver código</span>
               </a>
+
+              {project.data.backend?.code && (
+    <a
+      href={project.data.backend.code}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-3 py-1.5 
+      bg-gray-100 dark:bg-gray-800 
+      border border-gray-300 dark:border-gray-700 
+      rounded-full text-sm font-medium 
+      text-gray-700 dark:text-gray-300 
+      hover:bg-gray-200 dark:hover:bg-gray-700 
+      transition-all mb-3 w-fit"
+    >
+      <ExternalLinkIcon class="w-4 h-4" />
+      <span>Ver código backend</span>
+    </a>
+  )}
 
               <footer class="flex flex-wrap gap-2">
                 {allTechs.map((tech) => (
